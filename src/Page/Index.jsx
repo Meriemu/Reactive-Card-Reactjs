@@ -22,6 +22,7 @@ const Page = () => {
       <div className="ReactiveCard__FormContainer">
         {submitOk ? <Thanks /> : <Form />}
       </div>
+      <p className="MadeBy"> Made by Meryem ACHEMLAL ツ</p>
     </div>
   );
 };

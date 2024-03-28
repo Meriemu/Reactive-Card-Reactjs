@@ -8,6 +8,7 @@ body {
   font-weight: 500;
   font-size: 18px;
 }
+
 .ReactiveCard {
   &__Container {
     display: flex;
@@ -20,4 +21,17 @@ body {
   &__FormContainer {
     width: 100%;
   }
+}
+
+.MadeBy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $Active-input-border;
+  font-size: 14px;
+  text-shadow: 0 10px 10px $Active-input-border-gradient;
+  background: $Active-input-border-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px $Red-error);
 }
