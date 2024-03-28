@@ -1,0 +1,32 @@
+.ReactiveCard {
+  &__ThanksPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 100px auto;
+
+    @media (min-width: 1440px) {
+      margin-top: 0;
+      height: 100vh;
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 14px;
+      color: $Dark-grayish-violet;
+      margin: 5px 0 17px;
+    }
+    h1 {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    button {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+button {
+  color: $Light-grayish-violet;
+  background-color: $Very-dark-violet;
+  width: 100%;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $Active-input-border;
+    color: $Light-grayish-violet;
+    border: 1px solid $Dark-grayish-violet;
+  }
+}

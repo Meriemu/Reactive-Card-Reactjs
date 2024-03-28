@@ -1,0 +1,87 @@
+.ReactiveCard {
+  &__Form {
+    padding: 120px 25px 50px;
+    width: 100%;
+    margin: auto;
+
+    @media (min-width: 1440px) {
+      width: 35%;
+      height: 100vh;
+      padding: 15rem 0;
+    }
+  }
+}
+.Form {
+  &__Group,
+  &__SubGroup {
+    display: flex;
+    flex-direction: row;
+
+    @media (min-width: 1440px) {
+      align-items: baseline;
+    }
+  }
+
+  &__FieldWrapper {
+    width: 50%;
+
+    @media (min-width: 1440px) {
+      width: 40%;
+      margin-right: 15px;
+    }
+  }
+
+  &__Field {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+  }
+
+  &__Label {
+    display: flex;
+    flex: 0 0 auto;
+    color: $Very-dark-violet;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  &__Input {
+    width: 100%;
+    color: $Very-dark-violet;
+    padding: 13px;
+    border: 1px solid $Light-grayish-violet;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid;
+      border-color: $Active-input-border;
+    }
+
+    &::placeholder {
+      color: $Light-grayish-violet;
+      font-size: 20px;
+    }
+  }
+
+  &__Field--date {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+
+  &__ErrorMessage {
+    display: flex;
+    margin-top: 5px;
+    color: $Red-error;
+    font-size: 13px;
+  }
+  &__ErrorInput {
+    border-color: $Red-error;
+  }
+}

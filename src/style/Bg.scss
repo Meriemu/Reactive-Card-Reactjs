@@ -1,0 +1,137 @@
+.ReactiveCard {
+  &__BgDesktop {
+    display: none;
+    height: 100vh;
+    width: 40%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: 1440px) {
+      display: block;
+    }
+  }
+
+  &__BgMobile {
+    width: 100vw;
+    height: 40%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+}
+
+.CreditCard {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 20px;
+  position: absolute;
+  left: 10%;
+  top: 2%;
+
+  @media (min-width: 1440px) {
+    flex-direction: column;
+    padding: 0;
+    top: 20%;
+  }
+
+  &__CardFront {
+    position: relative;
+    margin-top: -70px;
+    left: -40px;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 18px;
+      background-image: url("../images/card-logo.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 65px;
+      height: 30px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-top: -50px;
+      left: 0;
+
+      &::after {
+        top: 30px;
+        left: 30px;
+        width: 84px;
+        height: 47px;
+      }
+    }
+  }
+
+  &__CardBack {
+    position: relative;
+    margin-top: 20px;
+
+    @media (min-width: 1440px) {
+      margin-top: 30px;
+      left: 20%;
+    }
+  }
+
+  // Data CardFront
+  &__Data {
+    position: absolute;
+    padding: 0px 20px 18px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: $Light-grayish-violet;
+    font-size: 20px;
+
+    @media (min-width: 1440px) {
+      padding: 25px;
+      font-size: 25px;
+    }
+  }
+
+  &__Bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    font-size: 10px;
+    text-transform: uppercase;
+
+    @media (min-width: 1440px) {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  }
+
+  // Data CardBack
+  &__Cvc {
+    position: absolute;
+    top: 45%;
+    right: 40px;
+    width: 100%;
+    color: $Light-grayish-violet;
+    font-size: 12px;
+    text-align: right;
+
+    @media (min-width: 1440px) {
+      right: 50px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

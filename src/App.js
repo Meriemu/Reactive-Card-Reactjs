@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Page from "./Page/Index";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ThemeContextProvider from "./Components/context/ThemeContext";
+import Thanks from "./Components/Thanks";
+import "./style/__index.scss";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContextProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/Reactive-Card-Reactjs/" element={<Page />} />
+            <Route exact path="ThankYou" element={<Thanks />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </ThemeContextProvider>
   );
 }
 
