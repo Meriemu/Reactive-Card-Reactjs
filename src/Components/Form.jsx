@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { useForm } from "react-hook-form";
-import { Formontext } from "./context/ThemeContext";
+import React, {useContext} from "react";
+import {useForm} from "react-hook-form";
+import {Formontext} from "./context/ThemeContext";
 
 const Form = () => {
   const {
@@ -18,7 +18,7 @@ const Form = () => {
   const {
     register,
     reset,
-    formState: { errors, isValid },
+    formState: {errors, isValid},
     handleSubmit,
   } = useForm();
 
@@ -114,12 +114,16 @@ const Form = () => {
                       message: "Only 2 digits",
                     },
                     min: {
-                      value: String(new Date().getMonth() + 2).padStart(2, ""),
+                      value:
+                        cardDate.year >
+                        parseInt(String(new Date().getFullYear()).slice(-2))
+                          ? 1
+                          : String(new Date().getMonth() + 2).padStart(2, "0"),
                       message: "Incorrect value of mounth",
                     },
                     max: {
                       value: 12,
-                      message: "Incorrect value of mounth",
+                      message: "Incorrect value of mounth (max 12)",
                     },
                   })}
                   className={`Form__Input ${
